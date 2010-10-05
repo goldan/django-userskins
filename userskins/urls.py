@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
-    (r'^set', 'userskins.views.set'),
+    url(r'^set/$', 'userskins.views.set', name = 'userskins_set'),
 )
+
