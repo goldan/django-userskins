@@ -1,3 +1,4 @@
 *.pyc
 *~
 *.sqlite
+django_userskins.egg-info/
