@@ -10,4 +10,4 @@ def userskins(request):
         return {"userskins_skin": skin, "userskins_use_compress":True }
     else:
         skin_uri = u"%s%s" % (settings.STATIC_URL, settings.USERSKINS_DETAILS[skin])
-        return {"usersins_current_skin_name": skin, "userskins_skin": skin_uri, "userskins_use_compress":False }
+        return {"userskins_current_skin_name": skin, "userskins_skin": skin_uri, "userskins_use_compress":False }
