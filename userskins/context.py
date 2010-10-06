@@ -10,5 +10,5 @@ def userskins(request):
     if getattr(settings,"USERSKINS_USE_COMPRESS_GROUPS",False):
         return {"userskins_skin": skin, "userskins_use_compress":True, "userskins_skin_list": skin_list }
     else:
-        skin_uri = u"%s%s%s" % (settings.STATIC_URL, settings.USERSKINS_SKINS_URL, settings.USERSKINS_DETAILS[skin])
+        skin_uri = u"%s%s%s" % (settings.STATIC_URL, settings.USERSKINS_SKINS_URL, settings.USERSKINS_DETAILS[skin][0])
         return {"userskins_current_skin_name": skin, "userskins_skin": skin_uri, "userskins_use_compress":False, "userskins_skin_list": skin_list }
