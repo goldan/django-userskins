@@ -6,7 +6,7 @@ def userskins(request):
     skin = settings.USERSKINS_DEFAULT
     if request.COOKIES.has_key("userskins") and request.COOKIES["userskins"] in settings.USERSKINS_DETAILS:
         skin = request.COOKIES["userskins"]
-    skin_list = settings.USERSKINS_DETAILS.keys()
+    skin_list = settings.USERSKINS_DETAILS
     if getattr(settings,"USERSKINS_USE_COMPRESS_GROUPS",False):
         return {"userskins_skin": skin, "userskins_use_compress":True, "userskins_skin_list": skin_list }
     else:
